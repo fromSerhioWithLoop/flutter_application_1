@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import '../presentation/login_view_model.dart';
-import 'package:flutter_application_1/widgets/buttons/exampleButton.dart';
+import 'package:flutter_application_1/widgets/buttons/example_button.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -108,14 +108,14 @@ class _LoginPageA extends State<LoginPage> {
                     ),
                     Padding(
                       padding: const EdgeInsets.symmetric(vertical: 16.0),
-                      child: ElevatedButton(
-                        onPressed: () {
-                          if (_formKey.currentState!.validate()) {
-                            // Process data.
-                          }
-                        },
-                        child: const Text('Sign in'),
-                      ),
+                      child: SizedBox(
+                        height: 50, width: 100,
+                        child: ExampleButton(
+                          child: const Text('login'),
+                          buttonAction: () {
+                          
+                        },),
+                      )
                     ),
                   ],
                 ),
